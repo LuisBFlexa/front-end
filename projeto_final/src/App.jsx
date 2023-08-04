@@ -1,14 +1,13 @@
-import './App.css'
 import './index.css'
 import Navbar from './components/Navbar/index.jsx'
-import Content from './components/Content'
+import Homepage from './components/Homepage'
 
 function App() {
 
   return (
     <>
       <Navbar />
-      <Content />
+      <Homepage />
     </>
   )
 }
