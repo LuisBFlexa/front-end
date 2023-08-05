@@ -1,4 +1,4 @@
-function Profile(user) {
+function Profile() {
     return (
         <div className = "bg-white flex justify-around">
             <div className="bg-[#F0EFEF] w-4/5 min-h-screen border-r-0.1 border-l-0.1 border-black">
