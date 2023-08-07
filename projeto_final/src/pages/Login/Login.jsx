@@ -9,7 +9,7 @@ function Login() {
                 </div>
             </div>
             
-            <nav className="bg-blue-900 h-14 bottom-0" ></nav>
+            
             
         </main>
     )
