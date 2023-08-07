@@ -1,16 +1,51 @@
 import './index.css'
-import Navbar from './components/Navbar/navbar.jsx'
-import Homepage from './pages/Homepage/homepage.jsx'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import { Navbar } from './components/Navbar/navbar'
+import { Root } from './root/root'
+import Homepage from './pages/Homepage/homepage'
 import Profile from './pages/Profile/profile'
-import Login from './pages/Login/Login'
+import Post from './pages/Post/post'
+import LogIn from './user/login/login'
+import SignIn from './user/signin/signin'
+
+const router = createBrowserRouter([
+  {
+    path: "/", 
+    element: <Root/>,
+    children:[{
+      path: "",
+      element: <Homepage />
+    },
+    {
+      path:"profile",
+      element: <Profile />
+    },
+    {
+      path: "posts",
+      element: <Post />
+    },
+    {
+      path:"post/:id",
+      element:<Post />
+    },
+    {
+      path:"login",
+      element: <LogIn />
+    },
+    {
+      path:"signin",
+      element: <SignIn />
+    }
+  ]
+  }
+])
 
 function App() {
 
   return (
     <>
-      
-      <Login />
-      
+      <RouterProvider router = { router } />
+
     </>
   )
 }

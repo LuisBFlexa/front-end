@@ -1,22 +1,23 @@
-function Navbar() {
+import {Link} from 'react-router-dom'
+
+
+export function Navbar() {
     return (
         <nav className="bg-blue-900 text-white h-14 flex items-center">
-            <p className="hover:underline px-3 font-inter font-semibold">
+            <Link to='' className="hover:underline px-3 font-inter font-semibold">
                 Home
-            </p>
-            <p className="hover:underline px-3 font-inter font-semibold">
+            </Link>
+            <Link to='posts' className="hover:underline px-3 font-inter font-semibold">
                 Posts
-            </p>
-            <div className="ml-auto flex py-3">
-                <p className="hover:underline font-inter font-semibold px-3">
+            </Link>
+            <div  className="ml-auto flex py-3">
+                <Link to='login' className="hover:underline font-inter font-semibold px-3">
                     Log in
-                </p>
-                <p className="hover:underline font-inter font-semibold px-3">
+                </Link>
+                <Link to='signin' className="hover:underline font-inter font-semibold px-3">
                     Criar conta
-                </p>
+                </Link>
             </div>
         </nav>
     );
 }
-
-export default Navbar;
