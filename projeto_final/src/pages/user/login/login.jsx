@@ -1,21 +1,35 @@
 import { useState } from "react";
+import { api } from "../../../utils/api/api";
+import { useUserContext } from "../../../utils/UserContexts";
+
+
 
 export default function LogIn () {
     const [email, setEmail] = useState("") 
     const [password, setPassword] = useState("") 
+    const { user, setUser } = useUserContext()
+    const handleSubmit = (ev) => {
+        ev.preventDefault();
+        api.post('users/login', {"email": email, "password": password})
+        .then((response) => {
+            setUser(response.data)
+            alert("LogIn realizado")
+        })
+        .catch(() =>{
+            alert("Email ou senha inválidos")
+        })
+    }
+
 
     return( 
         <main className="bg-[#F0EFEF]">
             <div className="flex justify-center items-center min-w-screen h-screen">
                 <div className=" bg-white shadow-xl w-1/3 h-2/3 mb-16 mt-20 flex flex-col rounded-2xl border-0.1 border-black">
                     <div className="mb-16">
-                        <p className="text-black text-center text-2xl font-inter font-semibold mt-8"> Login</p>
+                        <p className="text-black text-center text-2xl font-inter font-semibold mt-8"> Login </p>
                     </div>
 
-                    <form className="justify-center mx-16" onSubmit={(ev) => {
-                    ev.preventDefault();
-                    console.log(email, password)
-                    }}>
+                    <form className="justify-center mx-16" onSubmit={handleSubmit}>
                         <div className=" flex flex-col h-fit w-full  space-y-10 justify-center">
                             <input type="email" placeholder = 'EMAIL' className = 'border-0.1 border-black rounded-3xl h-10 text-center' value = {email} onChange={(ev) => {
                             setEmail(ev.target.value)}} />

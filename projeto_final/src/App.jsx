@@ -6,6 +6,7 @@ import Profile from './pages/profile/profile'
 import Post from './pages/post/post'
 import LogIn from './pages/user/login/login'
 import SignIn from './pages/user/signin/signin'
+import { UserContextProvider } from './utils/UserContexts'
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,9 @@ function App() {
 
   return (
     <>
-      <RouterProvider router = { router } />
+      <UserContextProvider>
+        <RouterProvider router = { router } />
+      </UserContextProvider>
       
     </>
   )
