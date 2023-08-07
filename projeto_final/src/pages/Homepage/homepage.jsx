@@ -1,10 +1,10 @@
-import Navbar from "../../components/Navbar/navbar"
+import { Navbar } from "../../components/Navbar/navbar"
 import { Footer } from "../../components/Footer/footer"
 function Homepage() {
     return( 
         
         <main className=" bg-[#F0EFEF]">
-            <Navbar />
+            
             <h1 className="mt-10 ml-64 w-72 text-transparent bg-clip-text bg-gradient-to-r to-[#001971] from-[#c4c4c4]  tracking-wider font-bold font-serif text-4xl">CATEGORIAS</h1>
             <div className=" flex justify-center space-x-60 mt-20 ">
                 <div className="hover:saturate-200 shadow-lg shadow-[#001971] flex rounded-3xl bg-blue-900 w-96 ">

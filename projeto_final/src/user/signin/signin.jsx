@@ -2,13 +2,13 @@ import { useState } from "react";
 
 export default function SignIn () {
     const [name, setName] = useState("")
-    const [lastname, setLastName] = useState("")
+    const [lastname, setLastName] = useState("")  
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
     return( 
         <div className="bg-[#ECECEC] min-w-screen h-screen flex justify-center items-center">
-            <div className=" w-1/2 h-2/3 bg-white rounded-2xl  justify-center  border-0.1 border-black">
+            <div className=" w-1/2 h-2/3 bg-white rounded-2xl  justify-center  border-0.1 border-black shadow-xl">
                 <div>
                     <p className="text-black text-center text-2xl font-inter font-semibold mt-8"> Faça sua conta</p>
                 </div>
