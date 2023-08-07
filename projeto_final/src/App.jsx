@@ -1,12 +1,11 @@
 import './index.css'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import { Navbar } from './components/Navbar/navbar'
-import { Root } from './root/root'
-import Homepage from './pages/Homepage/homepage'
-import Profile from './pages/Profile/profile'
-import Post from './pages/Post/post'
-import LogIn from './user/login/login'
-import SignIn from './user/signin/signin'
+import Root from './root/root'
+import Homepage from './pages/homepage/homepage'
+import Profile from './pages/profile/profile'
+import Post from './pages/post/post'
+import LogIn from './pages/user/login/login'
+import SignIn from './pages/user/signin/signin'
 
 const router = createBrowserRouter([
   {

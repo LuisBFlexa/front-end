@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 
 
-export function Navbar() {
+export default function Navbar() {
     return (
         <nav className="bg-blue-900 text-white h-14 flex items-center">
             <Link to='' className="hover:underline px-3 font-inter font-semibold">

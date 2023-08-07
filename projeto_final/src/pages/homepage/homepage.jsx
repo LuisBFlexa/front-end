@@ -1,6 +1,4 @@
-import { Navbar } from "../../components/Navbar/navbar"
-import { Footer } from "../../components/Footer/footer"
-function Homepage() {
+export default function Homepage() {
     return( 
         
         <main className=" bg-[#F0EFEF]">
@@ -43,10 +41,8 @@ function Homepage() {
                     </a>
                 </div>
             </div>
-            <Footer></Footer>
         </main>
         
         
     )
 }
-export default Homepage
