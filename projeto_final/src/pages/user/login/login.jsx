@@ -41,6 +41,9 @@ export default function LogIn () {
                             <p className="text-white text-2xl">Entrar</p>
                         </button>
                         </div>
+                        <div className="flex w-full h-fit justify-center items-center mt-8"> 
+                            <a className="text-slate-500 hover:underline" href="./signin">Crie sua conta</a>     
+                        </div>
                     </form>
                 </div>
             </div>
