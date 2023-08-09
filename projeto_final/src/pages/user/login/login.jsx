@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useUserContext } from "../../../utils/UserContexts";
+import { Link } from "react-router-dom";
 
 
 
@@ -39,7 +40,7 @@ export default function LogIn () {
                         </button>
                         </div>
                         <div className="flex w-full h-fit justify-center items-center mt-8"> 
-                            <a className="text-slate-500 hover:underline" href="./signin">Crie sua conta</a>     
+                            <Link to='../signin' className="text-slate-500 hover:underline" href="./signin">Crie sua conta</Link>     
                         </div>
                     </form>
                 </div>
