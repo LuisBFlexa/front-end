@@ -6,6 +6,7 @@ import Profile from './pages/profile/profile'
 import Post from './pages/post/post'
 import LogIn from './pages/user/login/login'
 import SignIn from './pages/user/signin/signin'
+import Editdata from './pages/user/edit data/edit data'
 import { UserContextProvider } from './utils/UserContexts'
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
     {
       path:"profile",
       element: <Profile />
+    },
+    {
+      path:"editdata",
+      element: <Editdata />
     },
     {
       path: "posts",
