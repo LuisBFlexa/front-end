@@ -1,11 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/footer/footer";
-import Navbar from "../components/navbar/navbar";
+import NavbarIn from "../components/navbar/navbar_loggedin";
+import NavbarOut from "../components/navbar/navbar_loggedout";
+import { useUserContext } from "../utils/UserContexts";
 
 export default function Root() {
+    const {user} = useUserContext()
+
     return (
         <>
-            <Navbar />
+            {user? <NavbarIn /> : <NavbarOut/>}
             <Outlet />
             <Footer />
         </>
