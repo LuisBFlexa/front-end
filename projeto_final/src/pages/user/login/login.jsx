@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { api } from "../../../utils/api/api";
 import { useUserContext } from "../../../utils/UserContexts";
 
 
@@ -7,16 +6,14 @@ import { useUserContext } from "../../../utils/UserContexts";
 export default function LogIn () {
     const [email, setEmail] = useState("") 
     const [password, setPassword] = useState("") 
-    const { user, setUser } = useUserContext()
+    const { user, login } = useUserContext()
+
     const handleSubmit = (ev) => {
         ev.preventDefault();
-        api.post('users/login', {"email": email, "password": password})
-        .then((response) => {
-            setUser(response.data)
-            alert("LogIn realizado")
-        })
-        .catch(() =>{
-            alert("Email ou senha inválidos")
+        login( { email, password })
+        .catch((err) =>{
+            console.log(err);
+            alert(err.response.data)
         })
     }
 

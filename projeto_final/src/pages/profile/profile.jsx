@@ -1,11 +1,15 @@
+import { useUserContext } from "../../utils/UserContexts"
+
 function Profile() {
+    const {user} = useUserContext()
+    
     return (
         <div className = "bg-white flex justify-around">
             <div className="bg-[#F0EFEF] w-4/5 min-h-screen border-r-0.1 border-l-0.1 border-black">
                 {/* Foto e capa */}
                 <div className="bg-[#CECECE] w-full h-40 flex items-end justify-between">
                     <img src = {user.picture} alt="Foto de Perfil" className=" ml-10 mb-2 border-2  bg-white w-48 h-36 rounded-3xl"/>
-                    <p className="mr-40 text-4xl text-white">{user.name}</p>
+                    <p className="mr-40 text-4xl text-white">{user.name} {user.last_name}</p>
                 </div>
 
                 {/* Descrição */}
@@ -14,7 +18,7 @@ function Profile() {
                         <div className="p-5 h-fit w-fit">
                             <p className="pb-4">Descrição</p>
                             <div className="bg-gray-400 rounded-3xl">
-                                <p className="p-2">{user.description}
+                                <p className="p-2">{user.description? user.description : 'O usuário ainda não possui uma descrição'}
                                 </p>
                             </div>
                         </div>  
@@ -26,7 +30,7 @@ function Profile() {
                     <p className="text">INTERAÇÕES</p>
                 </div>
 
-                {user.feedbacks.map((feedback) =>
+                {user.feedbacks? user.feedbacks.map((feedback) =>
                 <div className="flex justify-center">
                     <div className="flex w-4/5 h-fit my-10 justify-left">
                         <div className="bg-[#D9D9D9] w-96 h-fit flex-col">
@@ -40,7 +44,15 @@ function Profile() {
                         </div>
                     </div>
                 </div>
-)}
+):
+                <div className="flex justify-center">
+                    <div className="flex w-full ml-10 h-fit my-10 justify-left">
+                        <div className="bg-[#D9D9D9] w-96 h-fit flex-col rounded-3xl">
+                            <p className="my-3 text-center text-white text-2xl">O usuário ainda não possui interações</p>
+                        </div>
+                    </div>
+                </div>
+}
             </div>
         </div>
     )
