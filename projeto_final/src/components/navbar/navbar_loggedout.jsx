@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 export default function NavbarOut() {
     return (
-            <nav className="  bg-blue-900 text-white h-14 flex items-center md:justify-between w-full fixed">
+            <nav className="  bg-blue-900 text-white h-14 flex items-center md:justify-between w-full sticky">
                 <div className='flex justify-between items-center'>
                     <span className='text-2xl font-[Poppins] cursor-pointer'>
                         <img className='ml-3 h-10 inline' src="https://cdn-icons-png.flaticon.com/512/1187/1187544.png?w=740&t=st=1691609266~exp=1691609866~hmac=b04594c68609377e004a06579eb12734a81acffe8ac5ffd91778926ab7e53608" alt="Blog" />
