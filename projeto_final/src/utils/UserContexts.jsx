@@ -38,7 +38,6 @@ export const UserContextProvider = ({ children }) => {
     useEffect(() => {
         const email = Cookies.get("email");
         const authentication_token = Cookies.get("authentication_token");
-        console.log(email, authentication_token)
         if (email && authentication_token) {
             setDefaultHeaders(email, authentication_token);
             api.get('/users/show', { params: {"user": {"email": email}}})
@@ -49,7 +48,7 @@ export const UserContextProvider = ({ children }) => {
             })
         }}, [])
 
-
+        
     return (
         <userContext.Provider value = {{user, login, logout}}>
             {children}
