@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom"
 import { useUserContext } from "../../utils/UserContexts"
+import { photo_url } from "../../utils/images/photo_url"
+import { useEffect } from "react"
 
 function Profile() {
     const {user} = useUserContext()
@@ -8,12 +11,19 @@ function Profile() {
             <div className="bg-[#F0EFEF] w-4/5 min-h-screen border-r-0.1 border-l-0.1 border-black">
                 {/* Foto e capa */}
                 <div className="bg-[#CECECE] w-full h-40 flex items-end justify-between">
-                    <img src = {user.picture} alt="Foto de Perfil" className=" ml-10 mb-2 border-2  bg-white w-48 h-36 rounded-3xl"/>
+                    <img src = {photo_url.defaults.baseURL + user.profile_picture_url} alt="Foto de Perfil" className=" ml-10 mb-2 border-2  bg-white w-48 h-36 rounded-3xl"/>
                     <p className="mr-40 text-4xl text-white">{user.name} {user.last_name}</p>
                 </div>
 
+                {/* Botão Editar Dados */}
+                <div className="mt-6 ml-32 h-fit w-5/6 flex justify-end">
+                    <Link to='/edit_data'className= "p-3 bg-blue-900 text-white text-2xl rounded-2xl border-2 border-black">
+                    Editar Dados
+                    </Link>
+                </div>
+
                 {/* Descrição */}
-                <div className="mt-16 w-full flex"> 
+                <div className="mt-12 w-full flex"> 
                     <div className="mr-6 ml-6 w-full h-fit bg-white rounded-3xl ">
                         <div className="p-5 h-fit w-fit">
                             <p className="pb-4">Descrição</p>
