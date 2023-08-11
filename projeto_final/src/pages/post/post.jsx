@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 import { useState } from "react"
 import { photo_url } from "../../utils/images/photo_url"
 import { Link } from "react-router-dom"
+import avatar from "../../utils/images/avatar.jpg"
 
 function Post({isshowpage}) {
     const {id} = useParams('')
@@ -77,7 +78,7 @@ function Post({isshowpage}) {
 
                     {post.feedbacks? post.feedbacks.map((feedback)  => {
                         return (
-                    <div className="mx-10 my-20 w-fit h-fit max-h-1/5 flex flex-col justify-center items-center">
+                    <div className="mx-10 my-20 space-y-10  w-full h-fit max-h-1/5 flex flex-col justify-start items-center">
                         <div className="mt-16 mx-8 w-max-full h-fit border-b-0.1 border-black">
                             <p className="text-3xl">Feedbacks</p>
                         </div>
@@ -85,10 +86,11 @@ function Post({isshowpage}) {
                             <p className="p-4">
                             {feedback.comment}  
                             </p>
+                            <img className='w-10 h-10 rounded-2xl'src= {feedback.user_picture_url? photo_url.defaults.baseURL + feedback.user_picture_url: avatar} alt="" />
                         </div>
                     </div>
     )   }):
-                    <div className="flex flex-col justify-center">
+                    <div className= "mx-10 my-20 space-y-10  w-full h-fit max-h-1/5 flex flex-col justify-start items-center">
                         <div className="mt-16 mx-8 w-max-full h-fit border-b-0.1 border-black">
                             <p className="text-3xl">Feedbacks</p>
                         </div>

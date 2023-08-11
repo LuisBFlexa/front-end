@@ -23,7 +23,7 @@ function PostAdm() {
                     </div>
                 </div>
                 <div className="flex  justify-around items-center">
-                    <Link to='/createpost'>
+                    <Link to='/create_post'>
                         <button type = "submit" className="bg-blue-900 w-40 h-12 rounded-3xl mt-10 my-10">
                             <p className="text-white text-xl">Criar novo Post</p>
                         </button>
