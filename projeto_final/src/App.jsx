@@ -10,6 +10,7 @@ import Editdata from './pages/user/edit_data/edit_data'
 import { UserContextProvider } from './utils/UserContexts'
 import PostAdm from './pages/post/post_admin'
 import CreatePost from './pages/post/create_post'
+import CategoryPosts from './pages/post/categoy_posts'
 
 const router = createBrowserRouter([
   {
@@ -24,11 +25,11 @@ const router = createBrowserRouter([
       element: <Profile />
     },
     {
-      path:"postadm",
+      path:"post_adm",
       element: <PostAdm />
     },
     {
-      path:"createpost",
+      path:"create_post",
       element: <CreatePost />
     },
     {
@@ -36,12 +37,16 @@ const router = createBrowserRouter([
       element: <Editdata />
     },
     {
-      path: "posts",
+      path: "post/",
       element: <Post />
     },
     {
       path:"post/:id",
       element:<Post />
+    },
+    {
+      path:"category/:id",
+      element:<CategoryPosts />
     },
     {
       path:"login",
