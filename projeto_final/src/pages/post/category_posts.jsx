@@ -28,17 +28,16 @@ function CategoryPosts() {
                 </div>
 
                 {category && category.posts && category.posts.map((post) => 
-                {console.log(post)
-                    return(
+
                     <div key= {post.id}>
                         <div className="mt-28 w-full max-h-screen justify-center items-center flex"> 
                             <div className="flex flex-col bg-[#D9D9D9] w-2/3 h-fit max-h-4/5 rounded-b-2xl border-2 border-black justify-center items-center">
                                 <img className= 'w-full' src={photo_url.defaults.baseURL + post.post_image_url} alt="foto do post" />
-                                <Link className= 'p-8 text-2xl'to= {`post/${post.id}`}>{post.title}</Link>
+                                <Link className="p-8 text-2xl" to= {`post/${post.id}`}>{post.title}</Link>
                             </div>
                         </div>
                     </div>
-                )}
+                
                     
                     )}
             </div>

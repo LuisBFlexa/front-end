@@ -10,17 +10,17 @@ export default function NavbarOut() {
                     </span>
                 </div>
                 <ul className=' md:items-center z-[-1] md:z-auto md:static absolute bg-blue-900 w-full left-0 md:w-auto mx-4 my-6 md:my-0'>
-                    <Link to='' className="hover:underline px-3 font-inter font-semibold mx-4 my-6 md:my-0 ml-10">
+                    <Link to='/' className="hover:underline px-3 font-inter font-semibold mx-4 my-6 md:my-0 ml-10">
                         Home
                     </Link>
-                    <Link to='posts' className="hover:underline px-3 font-inter font-semibold mx-4 my-6 md:my-0">
+                    <Link to='/post' className="hover:underline px-3 font-inter font-semibold mx-4 my-6 md:my-0">
                         Posts
                     </Link>
                 
-                    <Link to='login' className="hover:underline font-inter font-semibold px-3 mx-4 my-6 md:my-0">
+                    <Link to='/login' className="hover:underline font-inter font-semibold px-3 mx-4 my-6 md:my-0">
                         Log in
                     </Link>
-                    <Link to='signin' className="hover:underline font-inter font-semibold px-3 mx-4 my-6 md:my-0">
+                    <Link to='/signin' className="hover:underline font-inter font-semibold px-3 mx-4 my-6 md:my-0">
                         Criar conta
                     </Link>
                 </ul>

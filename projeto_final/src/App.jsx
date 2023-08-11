@@ -10,7 +10,7 @@ import Editdata from './pages/user/edit_data/edit_data'
 import { UserContextProvider } from './utils/UserContexts'
 import PostAdm from './pages/post/post_admin'
 import CreatePost from './pages/post/create_post'
-import CategoryPosts from './pages/post/categoy_posts'
+import CategoryPosts from './pages/post/category_posts'
 
 const router = createBrowserRouter([
   {
@@ -38,11 +38,11 @@ const router = createBrowserRouter([
     },
     {
       path: "post/",
-      element: <Post />
+      element: <Post key='index_posts'/>
     },
     {
       path:"post/:id",
-      element:<Post />
+      element:<Post key='show_posts'/>
     },
     {
       path:"category/:id",
