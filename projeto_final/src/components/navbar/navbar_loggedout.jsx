@@ -13,7 +13,7 @@ export default function NavbarOut() {
                     <Link to='' className="hover:underline px-3 font-inter font-semibold mx-4 my-6 md:my-0 ml-10">
                         Home
                     </Link>
-                    <Link to='posts' className="hover:underline px-3 font-inter font-semibold mx-4 my-6 md:my-0">
+                    <Link to='post' className="hover:underline px-3 font-inter font-semibold mx-4 my-6 md:my-0">
                         Posts
                     </Link>
                 
